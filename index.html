@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Casa del Sabor — Restaurante</title>
+  <meta name="description" content="Disfruta los mejores platillos caseros en La Casa del Sabor. Consulta nuestro menú, horarios, ubicación y haz tu pedido por WhatsApp.">
+  <meta name="theme-color" content="#2d5016">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#nosotros" class="skip-link">Saltar al contenido</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-icon">🍽️</span>
+        La Casa del Sabor
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <div class="nav-overlay" id="navOverlay"></div>
+      <ul class="nav-menu">
+        <li class="nav-close-wrapper">
+          <button class="nav-close" aria-label="Cerrar menú">✕</button>
+        </li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#menu" class="nav-link">Menú</a></li>
+        <li><a href="#horario" class="nav-link">Horarios</a></li>
+        <li><a href="#resenas" class="nav-link">Reseñas</a></li>
+        <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+        <li><a href="#contacto" class="nav-link nav-link--cta">Pedir Ahora</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Restaurante Familiar&nbsp;·&nbsp;Desde 2014</span>
+      <h1>Cocina casera con el <span class="text-accent">sabor de siempre</span></h1>
+      <p class="hero-tagline">Platillos preparados al momento con ingredientes frescos y recetas de generación en generación.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Ver Menú</a>
+        <a href="https://wa.me/59899123456?text=Hola%2C%20quiero%20hacer%20una%20reservación" class="btn btn-outline" target="_blank" rel="noopener">Reservar Mesa</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>10+</strong>
+          <span>Años de tradición</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>4.8 ★</strong>
+          <span>Google Maps</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>500+</strong>
+          <span>Clientes felices</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Descubre más</span>
+      <div class="hero-scroll-arrow">↓</div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="about-img about-img--main" style="background: linear-gradient(135deg, #2d5016, #4a7c28);"></div>
+          <div class="about-img about-img--secondary" style="background: linear-gradient(135deg, #8b6914, #c49b1a);"></div>
+        </div>
+        <div class="about-text">
+          <span class="section-label">Nuestra Historia</span>
+          <h2>Un lugar donde cada platillo cuenta una historia</h2>
+          <p>Somos un restaurante familiar con más de 10 años de tradición. Nos especializamos en comida casera preparada con recetas que pasan de generación en generación.</p>
+          <p>Cada platillo está hecho al momento con los ingredientes más frescos de la región, seleccionados personalmente cada mañana en el mercado local.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">🌿</span>
+              <div>
+                <strong>Ingredientes Frescos</strong>
+                <span>Del mercado a tu mesa</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">👨‍🍳</span>
+              <div>
+                <strong>Hecho al Momento</strong>
+                <span>Cocina en vivo</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">❤️</span>
+              <div>
+                <strong>Recetas Familiares</strong>
+                <span>3 generaciones</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <span class="section-label section-label--center">Nuestro Menú</span>
+      <h2>Platos para todos los gustos</h2>
+      <p class="section-subtitle">Disponibles para comer aquí, para llevar o pedido por WhatsApp</p>
+
+      <!-- Dietary legend -->
+      <div class="menu-legend">
+        <div class="legend-item">
+          <span class="badge badge--meat" aria-hidden="true">🥩</span>
+          <span>Contiene carne</span>
+        </div>
+        <div class="legend-item">
+          <span class="badge badge--vegetarian" aria-hidden="true">🥬</span>
+          <span>Vegetariano</span>
+        </div>
+        <div class="legend-item">
+          <span class="badge badge--vegan" aria-hidden="true">🌱</span>
+          <span>Vegano</span>
+        </div>
+        <div class="legend-item">
+          <span class="badge badge--gluten-free" aria-hidden="true">🌾</span>
+          <span>Sin Gluten</span>
+        </div>
+      </div>
+
+      <!-- Category tabs -->
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-category="all">Todos</button>
+        <button class="menu-tab" data-category="entradas">Entradas</button>
+        <button class="menu-tab" data-category="principales">Principales</button>
+        <button class="menu-tab" data-category="bebidas">Bebidas</button>
+        <button class="menu-tab" data-category="postres">Postres</button>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- Entradas -->
+        <div class="menu-card" data-category="entradas">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #c0392b, #e74c3c);" role="img" aria-label="Empanadas de Carne">
+            <div class="menu-card-badges">
+              <span class="badge badge--meat" title="Contiene carne" aria-hidden="true">🥩</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Empanadas de Carne</h3>
+              <span class="menu-price">$90</span>
+            </div>
+            <p>Empanadas caseras rellenas de carne cortada a cuchillo, cebolla, morrón y aceitunas. Horneadas al momento.</p>
+            <span class="menu-card-tag">Entrada</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="entradas">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #c49b1a, #dbb32a);" role="img" aria-label="Empanadas de Queso y Cebolla">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegetarian" title="Vegetariano" aria-hidden="true">🥬</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Empanadas de Queso</h3>
+              <span class="menu-price">$80</span>
+            </div>
+            <p>Empanadas de queso y cebolla gratinadas al horno, crujientes por fuera y cremosas por dentro.</p>
+            <span class="menu-card-tag">Entrada</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="entradas">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #d4a017, #f0c040);" role="img" aria-label="Fainá">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegan" title="Vegano" aria-hidden="true">🌱</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Fainá</h3>
+              <span class="menu-price">$70</span>
+            </div>
+            <p>Fainá bien finito y crocante, hecho con harina de garbanzo al horno de piedra. Clásico uruguayo.</p>
+            <span class="menu-card-tag">Entrada</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="entradas">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #8b4513, #b5651d);" role="img" aria-label="Provoleta a la Parrilla">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegetarian" title="Vegetariano" aria-hidden="true">🥬</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Provoleta a la Parrilla</h3>
+              <span class="menu-price">$120</span>
+            </div>
+            <p>Provolone fundido a la parrilla con orégano, ají molido y aceite de oliva. Acompañado de pan casero.</p>
+            <span class="menu-card-tag">Entrada</span>
+          </div>
+        </div>
+
+        <!-- Principales -->
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #8e3200, #d35400);" role="img" aria-label="Chivito Canadiense">
+            <div class="menu-card-badges">
+              <span class="badge badge--meat" title="Contiene carne" aria-hidden="true">🥩</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Chivito Canadiense</h3>
+              <span class="menu-price">$350</span>
+            </div>
+            <p>Lomo al pan con jamón, queso, panceta, huevo frito, lechuga, tomate y mayonesa. Con papas fritas.</p>
+            <span class="menu-card-tag">Principal&nbsp;·&nbsp;Especialidad</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #c0392b, #e74c3c);" role="img" aria-label="Asado con Cuero">
+            <div class="menu-card-badges">
+              <span class="badge badge--meat" title="Contiene carne" aria-hidden="true">🥩</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Asado con Cuero</h3>
+              <span class="menu-price">$420</span>
+            </div>
+            <p>Asado a las brasas cocinado lento con cuero, jugoso y tierno. Acompañado de ensalada mixta y pan casero.</p>
+            <span class="menu-card-tag">Principal&nbsp;·&nbsp;Especialidad</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #d4a017, #f1c40f);" role="img" aria-label="Milanesa Napolitana">
+            <div class="menu-card-badges">
+              <span class="badge badge--meat" title="Contiene carne" aria-hidden="true">🥩</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Milanesa Napolitana</h3>
+              <span class="menu-price">$290</span>
+            </div>
+            <p>Milanesa de ternera gratinada con salsa de tomate, jamón y muzzarella. Con papas fritas o puré.</p>
+            <span class="menu-card-tag">Principal</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #1e8449, #27ae60);" role="img" aria-label="Milanesa de Soja">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegan" title="Vegano" aria-hidden="true">🌱</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Milanesa de Soja</h3>
+              <span class="menu-price">$220</span>
+            </div>
+            <p>Milanesa casera de soja con especias, crocante por fuera. Acompañada de ensalada y papas al horno.</p>
+            <span class="menu-card-tag">Principal</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #5b2c6f, #884ea0);" role="img" aria-label="Hamburguesa Completa">
+            <div class="menu-card-badges">
+              <span class="badge badge--meat" title="Contiene carne" aria-hidden="true">🥩</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Hamburguesa Completa</h3>
+              <span class="menu-price">$280</span>
+            </div>
+            <p>Medallón de carne casero con lechuga, tomate, cebolla, jamón, queso, huevo, panceta y papas fritas.</p>
+            <span class="menu-card-tag">Principal</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #e6a800, #f0c040);" role="img" aria-label="Pizza Muzzarella">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegetarian" title="Vegetariano" aria-hidden="true">🥬</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Pizza Muzzarella</h3>
+              <span class="menu-price">$250</span>
+            </div>
+            <p>Pizza al molde con abundante muzzarella derretida, salsa de tomate casera y aceitunas. Estilo uruguayo.</p>
+            <span class="menu-card-tag">Principal</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #784212, #af601a);" role="img" aria-label="Choripán">
+            <div class="menu-card-badges">
+              <span class="badge badge--meat" title="Contiene carne" aria-hidden="true">🥩</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Choripán</h3>
+              <span class="menu-price">$180</span>
+            </div>
+            <p>Chorizo criollo a la parrilla en pan casero con chimichurri y salsa criolla. El clásico de la vuelta.</p>
+            <span class="menu-card-tag">Principal</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #1a5276, #2980b9);" role="img" aria-label="Tallarines con Tuco">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegetarian" title="Vegetariano" aria-hidden="true">🥬</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Tallarines con Tuco</h3>
+              <span class="menu-price">$230</span>
+            </div>
+            <p>Tallarines caseros al huevo con salsa tuco de tomate, cebolla, morrón y albahaca. Queso rallado aparte.</p>
+            <span class="menu-card-tag">Principal</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="principales">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #6e2c00, #a04000);" role="img" aria-label="Pamplona">
+            <div class="menu-card-badges">
+              <span class="badge badge--meat" title="Contiene carne" aria-hidden="true">🥩</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Pamplona</h3>
+              <span class="menu-price">$380</span>
+            </div>
+            <p>Carne rellena con morrón, huevo duro, aceitunas y queso, cocida a la parrilla. Con guarnición a elección.</p>
+            <span class="menu-card-tag">Principal</span>
+          </div>
+        </div>
+
+        <!-- Bebidas -->
+        <div class="menu-card" data-category="bebidas">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #c49b1a, #dbb32a);" role="img" aria-label="Medio y Medio">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegan" title="Vegano" aria-hidden="true">🌱</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Medio y Medio</h3>
+              <span class="menu-price">$120</span>
+            </div>
+            <p>La bebida clásica uruguaya: mitad vino blanco espumoso y mitad vino blanco seco. Servido bien frío.</p>
+            <span class="menu-card-tag">Bebida</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="bebidas">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #1b4332, #2d6a4f);" role="img" aria-label="Clericó">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegan" title="Vegano" aria-hidden="true">🌱</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Clericó</h3>
+              <span class="menu-price">$140</span>
+            </div>
+            <p>Vino blanco con frutas de estación, naranja, durazno y manzana. Refrescante, ideal para compartir.</p>
+            <span class="menu-card-tag">Bebida</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="bebidas">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #8e3200, #d35400);" role="img" aria-label="Cerveza Artesanal">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegan" title="Vegano" aria-hidden="true">🌱</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Cerveza Artesanal</h3>
+              <span class="menu-price">$130</span>
+            </div>
+            <p>Cerveza artesanal uruguaya. Rubia, roja o negra. Pinta de 500&nbsp;ml. Consultá las variedades del día.</p>
+            <span class="menu-card-tag">Bebida</span>
+          </div>
+        </div>
+
+        <!-- Postres -->
+        <div class="menu-card" data-category="postres">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #d4a017, #e6c35c);" role="img" aria-label="Chajá">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegetarian" title="Vegetariano" aria-hidden="true">🥬</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Chajá</h3>
+              <span class="menu-price">$160</span>
+            </div>
+            <p>El postre uruguayo por excelencia. Bizcochuelo, merengue, crema chantilly y duraznos. Liviano y delicioso.</p>
+            <span class="menu-card-tag">Postre&nbsp;·&nbsp;Especialidad</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="postres">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #784212, #af601a);" role="img" aria-label="Martín Fierro">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegetarian" title="Vegetariano" aria-hidden="true">🥬</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Martín Fierro</h3>
+              <span class="menu-price">$120</span>
+            </div>
+            <p>Dulce de membrillo con queso Colonia. La combinación clásica del campo uruguayo. Simple y perfecto.</p>
+            <span class="menu-card-tag">Postre</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="postres">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #4a2800, #7d4e00);" role="img" aria-label="Flan con Dulce de Leche">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegetarian" title="Vegetariano" aria-hidden="true">🥬</span>
+              <span class="badge badge--gluten-free" title="Sin Gluten" aria-hidden="true">🌾</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Flan con Dulce de Leche</h3>
+              <span class="menu-price">$130</span>
+            </div>
+            <p>Flan casero cremoso bañado en dulce de leche y crema. Receta de la abuela, hecho todos los días.</p>
+            <span class="menu-card-tag">Postre</span>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="postres">
+          <div class="menu-card-img" style="background: linear-gradient(135deg, #5b2c6f, #884ea0);" role="img" aria-label="Tortas Fritas">
+            <div class="menu-card-badges">
+              <span class="badge badge--vegan" title="Vegano" aria-hidden="true">🌱</span>
+            </div>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3>Tortas Fritas</h3>
+              <span class="menu-price">$90</span>
+            </div>
+            <p>Tortas fritas caseras espolvoreadas con azúcar. Crocantes por fuera, tiernas por dentro. Ideales con mate.</p>
+            <span class="menu-card-tag">Postre</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HORARIO ============ -->
+  <section class="schedule" id="horario">
+    <div class="container">
+      <div class="schedule-layout">
+        <div class="schedule-info">
+          <span class="section-label">Horarios</span>
+          <h2>¿Cuándo nos visitas?</h2>
+          <p>Abrimos todos los días para que disfrutes de nuestra cocina. Los fines de semana tenemos menú especial con platillos de temporada.</p>
+          <div class="schedule-highlight">
+            <span class="schedule-highlight-icon" aria-hidden="true">📞</span>
+            <div>
+              <strong>Reservaciones</strong>
+              <span>Llama al (02) 1234-5678 o escríbenos por WhatsApp</span>
+            </div>
+          </div>
+        </div>
+        <div class="schedule-table">
+          <div class="schedule-item">
+            <div class="schedule-day-group">
+              <span class="schedule-icon" aria-hidden="true">🕐</span>
+              <span class="schedule-day">Lunes a Viernes</span>
+            </div>
+            <span class="schedule-time">9:00 AM — 9:00 PM</span>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-day-group">
+              <span class="schedule-icon" aria-hidden="true">🕐</span>
+              <span class="schedule-day">Sábado</span>
+            </div>
+            <span class="schedule-time">10:00 AM — 10:00 PM</span>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-day-group">
+              <span class="schedule-icon" aria-hidden="true">🕐</span>
+              <span class="schedule-day">Domingo</span>
+            </div>
+            <span class="schedule-time">10:00 AM — 6:00 PM</span>
+          </div>
+          <div class="schedule-note">
+            <span aria-hidden="true">🎉</span> Happy Hour: Viernes 5:00&nbsp;—&nbsp;7:00&nbsp;PM&nbsp;·&nbsp;2×1 en micheladas
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="resenas">
+    <div class="container">
+      <span class="section-label section-label--center">Reseñas</span>
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="reviews-summary">
+        <div class="reviews-rating">
+          <span class="reviews-score">4.8</span>
+          <div class="reviews-stars" aria-hidden="true">★★★★★</div>
+          <span class="reviews-count">Basado en 247 reseñas en Google Maps</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">MG</div>
+            <div>
+              <strong class="review-name">María García</strong>
+              <div class="review-meta">
+                <span class="review-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                <span class="review-date">Hace 2 semanas</span>
+              </div>
+            </div>
+          </div>
+          <p>"El mejor pozole que he probado fuera de casa. El sabor es auténtico y la atención es increíble. Siempre nos reciben con una sonrisa. ¡100% recomendado!"</p>
+          <span class="review-source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285f4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34a853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fbbc05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#ea4335"/></svg>
+            Google
+          </span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">CL</div>
+            <div>
+              <strong class="review-name">Carlos López</strong>
+              <div class="review-meta">
+                <span class="review-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                <span class="review-date">Hace 1 mes</span>
+              </div>
+            </div>
+          </div>
+          <p>"Las enchiladas son espectaculares y el mole es de otro nivel. Ambiente familiar muy agradable. Perfecto para ir con niños. Los precios son muy justos."</p>
+          <span class="review-source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285f4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34a853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fbbc05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#ea4335"/></svg>
+            Google
+          </span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">AS</div>
+            <div>
+              <strong class="review-name">Ana Sánchez</strong>
+              <div class="review-meta">
+                <span class="review-stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                <span class="review-date">Hace 1 mes</span>
+              </div>
+            </div>
+          </div>
+          <p>"Soy celíaca y me encanta que señalizan los platillos sin gluten. Pude comer tranquila y disfrutar. El guacamole y el pozole son increíbles. ¡Volveré!"</p>
+          <span class="review-source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285f4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34a853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fbbc05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#ea4335"/></svg>
+            Google
+          </span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">RM</div>
+            <div>
+              <strong class="review-name">Roberto Martínez</strong>
+              <div class="review-meta">
+                <span class="review-stars" aria-label="4 de 5 estrellas">★★★★<span class="star-empty">★</span></span>
+                <span class="review-date">Hace 2 meses</span>
+              </div>
+            </div>
+          </div>
+          <p>"Muy buen restaurante. La comida tiene sabor casero de verdad. El café de olla es adictivo. Solo le pongo 4 estrellas porque a veces hay espera los fines de semana."</p>
+          <span class="review-source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#4285f4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34a853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fbbc05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#ea4335"/></svg>
+            Google
+          </span>
+        </div>
+
+      </div>
+      <a href="https://maps.google.com" class="btn btn-secondary" target="_blank" rel="noopener">Ver todas las reseñas en Google Maps →</a>
+    </div>
+  </section>
+
+  <!-- ============ LOCATION ============ -->
+  <section class="location" id="ubicacion">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-info">
+          <span class="section-label">Ubicación</span>
+          <h2>¿Cómo llegar?</h2>
+          <div class="location-details">
+            <div class="location-detail">
+              <span class="location-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Dirección</strong>
+                <span>Plaza Independencia 811,<br>Montevideo, Uruguay, CP 11000</span>
+              </div>
+            </div>
+            <div class="location-detail">
+              <span class="location-icon" aria-hidden="true">🅿️</span>
+              <div>
+                <strong>Estacionamiento</strong>
+                <span>Estacionamiento público a 50&nbsp;m&nbsp;·&nbsp;$20/hora</span>
+              </div>
+            </div>
+            <div class="location-detail">
+              <span class="location-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Teléfono</strong>
+                <span>(02) 1234-5678</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://maps.google.com" class="btn btn-secondary" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+        </div>
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.0377!2d-56.2004!3d-34.9065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355b0!2sPlaza%20Independencia!5e0!3m2!1ses!2suy!4v1711700000000"
+            width="100%"
+            height="400"
+            style="border:0; display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de La Casa del Sabor en Plaza Independencia, Montevideo">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA / WHATSAPP ============ -->
+  <section class="cta" id="contacto">
+    <div class="container">
+      <div class="cta-content">
+        <span class="section-label section-label--light">Haz tu Pedido</span>
+        <h2>¿Listo para ordenar?</h2>
+        <p>Haz tu pedido directamente por WhatsApp y te lo tenemos listo para recoger o te lo llevamos a domicilio.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/59899123456?text=Hola%2C%20quiero%20hacer%20un%20pedido" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir por WhatsApp
+          </a>
+          <a href="tel:+59821234567" class="btn btn-outline btn-outline--light">📞 Llamar al Restaurante</a>
+        </div>
+        <div class="cta-features">
+          <span><span aria-hidden="true">✅</span> Para llevar</span>
+          <span><span aria-hidden="true">✅</span> Entrega a domicilio</span>
+          <span><span aria-hidden="true">✅</span> Reservaciones</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">🍽️ La Casa del Sabor</span>
+          <p>Cocina casera con el sabor de siempre. Más de 10 años llevando tradición y sabor a tu mesa.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#menu">Menú</a>
+          <a href="#horario">Horarios</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Pedidos</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>📍 Plaza Independencia 811, Montevideo</p>
+          <p>📞 (02) 1234-5678</p>
+          <p>📱 WhatsApp: 099 123 456</p>
+          <p>📧 hola@casadelsabor.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 La Casa del Sabor. Todos los derechos reservados.</p>
+        <p class="footer-credit">Diseño web por <strong>Alex García</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOATING BUTTON ============ -->
+  <a href="https://wa.me/59899123456?text=Hola%2C%20quiero%20hacer%20un%20pedido" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-float-label">¡Haz tu pedido!</span>
+  </a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    const overlay = document.getElementById('navOverlay');
+    const closeBtn = document.querySelector('.nav-close');
+
+    function openMenu() {
+      toggle.setAttribute('aria-expanded', 'true');
+      menu.classList.add('nav-menu--open');
+      overlay.classList.add('nav-overlay--visible');
+      toggle.classList.add('nav-toggle--open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('nav-menu--open');
+      overlay.classList.remove('nav-overlay--visible');
+      toggle.classList.remove('nav-toggle--open');
+      document.body.style.overflow = '';
+    }
+
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Menu category filter
+    const tabs = document.querySelectorAll('.menu-tab');
+    const cards = document.querySelectorAll('.menu-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const category = tab.dataset.category;
+
+        cards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = '';
+            requestAnimationFrame(() => card.classList.add('menu-card--visible'));
+          } else {
+            card.classList.remove('menu-card--visible');
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Initial animation for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('menu-card--visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
