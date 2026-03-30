@@ -624,7 +624,6 @@ section h2 {
 .menu-card {
   background: var(--color-white);
   border-radius: var(--radius);
-  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition);
   opacity: 0;
@@ -651,21 +650,7 @@ section h2 {
   background-color: var(--color-bg-alt);
   background-position: center;
   background-size: cover;
-  position: relative;
-}
-
-.menu-card-badges {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  display: flex;
-  gap: 6px;
-}
-
-.menu-card-badges .badge {
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(4px);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .menu-card-body {
@@ -699,6 +684,54 @@ section h2 {
   margin-bottom: 10px;
 }
 
+.menu-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.menu-card-badges {
+  display: flex;
+  gap: 4px;
+}
+
+.badge[title] {
+  cursor: pointer;
+  position: relative;
+}
+
+.badge-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: -4px;
+  background: var(--color-bg-dark);
+  color: var(--color-white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.badge-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  border: 5px solid transparent;
+  border-top-color: var(--color-bg-dark);
+}
+
+.badge-tooltip--visible {
+  opacity: 1;
+}
+
 .menu-card-tag {
   display: inline-block;
   font-size: 0.72rem;
@@ -709,6 +742,7 @@ section h2 {
   padding: 3px 10px;
   background: var(--color-bg-alt);
   border-radius: 50px;
+  white-space: nowrap;
 }
 
 /* ============ SCHEDULE ============ */
